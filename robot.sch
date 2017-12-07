@@ -1,0 +1,504 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:robot-cache
+LIBS:nRF52832
+LIBS:nRF52832-module
+LIBS:dc_controller
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "2017-12-06"
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L nRF52832-module nRF52-U1
+U 1 1 5A292210
+P 8200 2600
+F 0 "nRF52-U1" H 9050 1600 60  0000 C CNN
+F 1 "nRF52832-module" H 8200 2600 60  0000 C CNN
+F 2 "" H 8200 2600 60  0001 C CNN
+F 3 "" H 8200 2600 60  0001 C CNN
+	1    8200 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor_DC M1
+U 1 1 5A2922A1
+P 2100 6000
+F 0 "M1" H 2200 6100 50  0000 L CNN
+F 1 "LEFT" H 2200 5800 50  0000 L TNN
+F 2 "" H 2100 5910 50  0001 C CNN
+F 3 "" H 2100 5910 50  0001 C CNN
+	1    2100 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor_DC M2
+U 1 1 5A2922E0
+P 2800 6000
+F 0 "M2" H 2900 6100 50  0000 L CNN
+F 1 "RIGHT" H 2900 5800 50  0000 L TNN
+F 2 "" H 2800 5910 50  0001 C CNN
+F 3 "" H 2800 5910 50  0001 C CNN
+	1    2800 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 5A292310
+P 2300 2500
+F 0 "R1" V 2380 2500 50  0000 C CNN
+F 1 "4.7kOhm" V 2200 2500 50  0000 C CNN
+F 2 "" V 2230 2500 50  0001 C CNN
+F 3 "" H 2300 2500 50  0001 C CNN
+	1    2300 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L R R2
+U 1 1 5A29247E
+P 2700 2500
+F 0 "R2" V 2780 2500 50  0000 C CNN
+F 1 "4.7kOhm" V 2600 2500 50  0000 C CNN
+F 2 "" V 2630 2500 50  0001 C CNN
+F 3 "" H 2700 2500 50  0001 C CNN
+	1    2700 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L R R3
+U 1 1 5A2924CA
+P 2300 2750
+F 0 "R3" V 2380 2750 50  0000 C CNN
+F 1 "4.7kOhm" V 2200 2750 50  0000 C CNN
+F 2 "" V 2230 2750 50  0001 C CNN
+F 3 "" H 2300 2750 50  0001 C CNN
+	1    2300 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L R R4
+U 1 1 5A29251B
+P 2700 2750
+F 0 "R4" V 2780 2750 50  0000 C CNN
+F 1 "4.7kOhm" V 2600 2750 50  0000 C CNN
+F 2 "" V 2630 2750 50  0001 C CNN
+F 3 "" H 2700 2750 50  0001 C CNN
+	1    2700 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2450 2750 2550 2750
+Wire Wire Line
+	2500 2750 2500 3250
+Connection ~ 2500 2750
+Wire Wire Line
+	2450 2500 2550 2500
+Wire Wire Line
+	2500 1950 2500 2500
+Connection ~ 2500 2500
+$Comp
+L R_Variable R6
+U 1 1 5A2929A5
+P 2700 3050
+F 0 "R6" V 2800 2950 50  0000 L CNN
+F 1 "Sensor2" V 2600 3000 50  0000 L CNN
+F 2 "" V 2630 3050 50  0001 C CNN
+F 3 "" H 2700 3050 50  0001 C CNN
+	1    2700 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L R_Variable R5
+U 1 1 5A292A4A
+P 2700 2150
+F 0 "R5" V 2800 2050 50  0000 L CNN
+F 1 "Sensor1" V 2600 2100 50  0000 L CNN
+F 2 "" V 2630 2150 50  0001 C CNN
+F 3 "" H 2700 2150 50  0001 C CNN
+	1    2700 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2500 3050 2550 3050
+Wire Wire Line
+	2500 2150 2550 2150
+Wire Wire Line
+	2850 2150 3050 2150
+Wire Wire Line
+	3050 2150 3050 2500
+Wire Wire Line
+	2850 2500 3300 2500
+Wire Wire Line
+	2850 2750 3050 2750
+Wire Wire Line
+	3050 2750 3050 3050
+Wire Wire Line
+	2850 3050 3300 3050
+$Comp
+L Earth #PWR01
+U 1 1 5A293315
+P 3300 3050
+F 0 "#PWR01" H 3300 2800 50  0001 C CNN
+F 1 "Earth" H 3300 2900 50  0001 C CNN
+F 2 "" H 3300 3050 50  0001 C CNN
+F 3 "" H 3300 3050 50  0001 C CNN
+	1    3300 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Earth #PWR02
+U 1 1 5A293342
+P 3300 2500
+F 0 "#PWR02" H 3300 2250 50  0001 C CNN
+F 1 "Earth" H 3300 2350 50  0001 C CNN
+F 2 "" H 3300 2500 50  0001 C CNN
+F 3 "" H 3300 2500 50  0001 C CNN
+	1    3300 2500
+	1    0    0    -1  
+$EndComp
+Connection ~ 3050 2500
+Connection ~ 3050 3050
+$Comp
+L VDD #PWR03
+U 1 1 5A293398
+P 2000 2450
+F 0 "#PWR03" H 2000 2300 50  0001 C CNN
+F 1 "VDD" H 2000 2600 50  0000 C CNN
+F 2 "" H 2000 2450 50  0001 C CNN
+F 3 "" H 2000 2450 50  0001 C CNN
+	1    2000 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 2500 2000 2500
+Wire Wire Line
+	2000 2450 2000 2750
+Wire Wire Line
+	2000 2750 2150 2750
+Connection ~ 2000 2500
+Connection ~ 2500 2150
+Connection ~ 2500 3050
+Text GLabel 2500 1950 1    60   Output ~ 0
+Pomiar1
+Text GLabel 2500 3250 3    60   Output ~ 0
+Pomiar2
+Wire Wire Line
+	7100 2300 6900 2300
+Wire Wire Line
+	7100 2200 7000 2200
+Wire Wire Line
+	7000 2200 7000 2150
+Wire Wire Line
+	7000 2150 6900 2150
+Text GLabel 6900 2150 0    60   Input ~ 0
+Pomiar1
+Text GLabel 6900 2300 0    60   Input ~ 0
+Pomiar2
+Text GLabel 6800 2450 0    60   Output ~ 0
+PWM_L
+Text GLabel 6800 2600 0    60   Output ~ 0
+PWM_R
+Text GLabel 6800 2750 0    60   Output ~ 0
+ROT_FOR_L
+Text GLabel 6800 2900 0    60   Output ~ 0
+ROT_REV_L
+Text GLabel 6800 3050 0    60   Output ~ 0
+ROT_FOR_R
+Text GLabel 6800 3200 0    60   Output ~ 0
+ROT_REV_R
+Wire Wire Line
+	7100 3000 7050 3000
+Wire Wire Line
+	7050 3000 7050 3200
+Wire Wire Line
+	7100 2900 7000 2900
+Wire Wire Line
+	7000 2900 7000 3050
+Wire Wire Line
+	7100 2800 6950 2800
+Wire Wire Line
+	6950 2800 6950 2900
+Wire Wire Line
+	7100 2700 6900 2700
+Wire Wire Line
+	6900 2700 6900 2750
+Wire Wire Line
+	7100 2400 6950 2400
+Wire Wire Line
+	6950 2400 6950 2450
+Wire Wire Line
+	6950 2450 6800 2450
+Wire Wire Line
+	6800 2600 7000 2600
+Wire Wire Line
+	7000 2600 7000 2500
+Wire Wire Line
+	7000 2500 7100 2500
+Wire Wire Line
+	6900 2750 6800 2750
+Wire Wire Line
+	6950 2900 6800 2900
+Wire Wire Line
+	7000 3050 6800 3050
+Wire Wire Line
+	7050 3200 6800 3200
+Text GLabel 2100 5650 1    60   Input ~ 0
+OUT1
+Text GLabel 2800 5650 1    60   Input ~ 0
+OUT3
+Text GLabel 2100 6500 3    60   Input ~ 0
+OUT2
+Text GLabel 2800 6500 3    60   Input ~ 0
+OUT4
+Wire Wire Line
+	2100 5800 2100 5650
+Wire Wire Line
+	2100 6300 2100 6500
+Wire Wire Line
+	2800 6300 2800 6500
+Wire Wire Line
+	2800 5800 2800 5650
+Text GLabel 5400 4300 1    60   Output ~ 0
+OUT3
+Text GLabel 5550 4300 1    60   Output ~ 0
+OUT4
+Text GLabel 5000 6400 3    60   Output ~ 0
+OUT1
+Text GLabel 5150 6400 3    60   Output ~ 0
+OUT2
+Text GLabel 5500 6200 3    60   Input ~ 0
+ROT_FOR_L
+Text GLabel 5900 6200 3    60   Input ~ 0
+ROT_REV_L
+Text GLabel 4950 4350 1    60   Input ~ 0
+ROT_FOR_R
+Text GLabel 5250 4350 1    60   Input ~ 0
+ROT_REV_R
+Text GLabel 5700 6200 3    60   Input ~ 0
+PWM_L
+Text GLabel 5100 4350 1    60   Input ~ 0
+PWM_R
+Wire Wire Line
+	5400 4300 5400 4850
+Wire Wire Line
+	5500 4400 5500 4850
+Wire Wire Line
+	5500 4400 5550 4400
+Wire Wire Line
+	5550 4400 5550 4300
+Wire Wire Line
+	5000 6400 5000 6150
+Wire Wire Line
+	5000 6150 5100 6150
+Wire Wire Line
+	5100 6150 5100 5900
+$Comp
+L +12V #PWR04
+U 1 1 5A295CD8
+P 5300 6150
+F 0 "#PWR04" H 5300 6000 50  0001 C CNN
+F 1 "+12V" H 5300 6290 50  0000 C CNN
+F 2 "" H 5300 6150 50  0001 C CNN
+F 3 "" H 5300 6150 50  0001 C CNN
+	1    5300 6150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5300 6150 5300 5900
+Wire Wire Line
+	5000 4850 5000 4800
+$Comp
+L +5V #PWR05
+U 1 1 5A29605B
+P 5000 4800
+F 0 "#PWR05" H 5000 4650 50  0001 C CNN
+F 1 "+5V" H 5000 4940 50  0000 C CNN
+F 2 "" H 5000 4800 50  0001 C CNN
+F 3 "" H 5000 4800 50  0001 C CNN
+	1    5000 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Earth #PWR06
+U 1 1 5A296DEC
+P 4700 6000
+F 0 "#PWR06" H 4700 5750 50  0001 C CNN
+F 1 "Earth" H 4700 5850 50  0001 C CNN
+F 2 "" H 4700 6000 50  0001 C CNN
+F 3 "" H 4700 6000 50  0001 C CNN
+	1    4700 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 4850 4900 4800
+Wire Wire Line
+	4900 4800 4700 4800
+Wire Wire Line
+	4700 4800 4700 6000
+Wire Wire Line
+	5000 5900 5000 5950
+Wire Wire Line
+	5000 5950 4700 5950
+Connection ~ 4700 5950
+Wire Wire Line
+	5600 4850 5600 4800
+Wire Wire Line
+	5600 4800 5800 4800
+Wire Wire Line
+	5800 4800 5800 4850
+$Comp
+L Earth #PWR07
+U 1 1 5A297022
+P 5800 4850
+F 0 "#PWR07" H 5800 4600 50  0001 C CNN
+F 1 "Earth" H 5800 4700 50  0001 C CNN
+F 2 "" H 5800 4850 50  0001 C CNN
+F 3 "" H 5800 4850 50  0001 C CNN
+	1    5800 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 5900 5400 6150
+Wire Wire Line
+	5400 6150 5500 6150
+Wire Wire Line
+	5500 6150 5500 6200
+Wire Wire Line
+	5500 5900 5500 5900
+Wire Wire Line
+	5500 5900 5500 6100
+Wire Wire Line
+	5500 6100 5700 6100
+Wire Wire Line
+	5600 5900 5600 6050
+Wire Wire Line
+	5600 6050 5900 6050
+Wire Wire Line
+	5700 6100 5700 6200
+Wire Wire Line
+	5900 6050 5900 6200
+Wire Wire Line
+	5200 5900 5200 6200
+Wire Wire Line
+	5200 6200 5150 6200
+Wire Wire Line
+	5150 6200 5150 6400
+Wire Wire Line
+	5250 4350 5250 4400
+Wire Wire Line
+	5250 4400 5300 4400
+Wire Wire Line
+	5300 4400 5300 4850
+Wire Wire Line
+	5100 4350 5100 4450
+Wire Wire Line
+	5100 4450 5200 4450
+Wire Wire Line
+	5200 4450 5200 4850
+Wire Wire Line
+	4950 4350 4950 4500
+Wire Wire Line
+	4950 4500 5100 4500
+Wire Wire Line
+	5100 4500 5100 4850
+$Comp
+L VDD #PWR08
+U 1 1 5A298258
+P 8900 5800
+F 0 "#PWR08" H 8900 5650 50  0001 C CNN
+F 1 "VDD" H 8900 5950 50  0000 C CNN
+F 2 "" H 8900 5800 50  0001 C CNN
+F 3 "" H 8900 5800 50  0001 C CNN
+	1    8900 5800
+	-1   0    0    1   
+$EndComp
+$Comp
+L +3V3 #PWR09
+U 1 1 5A2982C8
+P 8900 5600
+F 0 "#PWR09" H 8900 5450 50  0001 C CNN
+F 1 "+3V3" H 8900 5740 50  0000 C CNN
+F 2 "" H 8900 5600 50  0001 C CNN
+F 3 "" H 8900 5600 50  0001 C CNN
+	1    8900 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 5600 8900 5800
+NoConn ~ 8700 3700
+NoConn ~ 8600 3700
+NoConn ~ 8500 3700
+NoConn ~ 8400 3700
+NoConn ~ 8300 3700
+NoConn ~ 8200 3700
+NoConn ~ 8100 3700
+NoConn ~ 8000 3700
+NoConn ~ 7900 3700
+NoConn ~ 7800 3700
+NoConn ~ 7700 3700
+NoConn ~ 9300 2700
+NoConn ~ 9300 2800
+NoConn ~ 9300 2900
+NoConn ~ 9300 3000
+NoConn ~ 9300 3100
+NoConn ~ 8750 1500
+NoConn ~ 8650 1500
+NoConn ~ 8550 1500
+NoConn ~ 8450 1500
+NoConn ~ 8350 1500
+NoConn ~ 8250 1500
+NoConn ~ 8150 1500
+NoConn ~ 7100 2000
+NoConn ~ 7100 2100
+$Comp
+L DC_controller Controller-U1
+U 1 1 5A298A49
+P 5250 5400
+F 0 "Controller-U1" H 6100 5550 60  0000 C CNN
+F 1 "DC_controller" H 5250 5400 60  0000 C CNN
+F 2 "" H 5250 5550 60  0001 C CNN
+F 3 "" H 5250 5550 60  0001 C CNN
+	1    5250 5400
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
